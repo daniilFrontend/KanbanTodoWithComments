@@ -1,4 +1,4 @@
-https://kanban-todo-with-comments-p5sd.vercel.app/todos - развернутый проект
+https://kanban-todo-with-comments-p5sd.vercel.app - развернутый проект
 
 Описание проекта Менеджер задач со следуищими реализованными фичами:
 
