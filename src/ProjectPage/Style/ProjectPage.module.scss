@@ -1,0 +1,78 @@
+@mixin displayFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.appContainer{
+    display: flex;
+    background-color: rgb(253, 236, 236);  
+    align-items: center;
+    flex-direction: column;
+     min-height: 100vh;
+}
+.projectModal{
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    min-width: 500px;
+    min-height: 300px;
+    padding: 15px 35px 45px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);  
+    .projectInput{
+        @include displayFlex();
+        position: relative;
+        justify-content: center;
+        gap: 10px;
+        label{
+          position: absolute;
+          font-size: 12px;
+          color: red;
+          top: -7px;
+          background-color: white
+        }
+        input{
+            border-radius: 10px;
+            padding: 5px;
+            padding-left: 10px;
+            background-color: #f9fafb;
+            box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+              0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+            border: 1px solid #d0d5dd;
+            background: white;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            &:focus {
+                border: 1px solid #d6bbfb;
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+                z-index: 1;
+                outline: none;
+              }
+        }
+        button{
+            border-radius: 10px;
+            padding: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: #b987ff;
+            box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+              0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+            border: 1px solid #d0d5dd;
+            color: white;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            &:hover {
+                border: 1px solid #d6bbfb;
+                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+                z-index: 1;
+                outline: none;
+              }
+              &:active{
+                background-color: #a96cff;
+              }
+        }
+        }
+        .projectList{
+        @include displayFlex();
+        flex-direction: column;
+        padding-top: 20px;   
+        }
+}

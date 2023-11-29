@@ -1,0 +1,78 @@
+@mixin everyButton{
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #b987ff;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+      0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    border: 1px solid #d0d5dd;
+    color: white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    &:hover {
+      border: 1px solid #d6bbfb;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+      z-index: 1;
+      outline: none;
+    }
+    &:active {
+      background-color: #a96cff;
+    }
+
+}
+.background {
+  background-color: rgb(253, 236, 236);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-width: 70%;
+  min-height: 600px;
+  padding: 15px 35px 45px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.menu {
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+  button {
+    @include everyButton()
+  }
+}
+.dropArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90%;
+  margin-top: 30px;
+  .taskContainer {
+    border-radius: 10px;
+    padding: 15px 35px 30px;
+    width: 35%;
+    margin-left: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    .todoType{
+        font-size: 20px;
+        width: 100%;
+      border-bottom: 1px solid #a96cff;
+    }
+    .todoItem{
+        width: 100%;
+        max-width: 320px;
+    }
+    div{
+        align-self: flex-start;
+    }
+  }
+}

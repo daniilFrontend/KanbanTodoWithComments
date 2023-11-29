@@ -1,0 +1,6 @@
+export const QUEUE = "QUEUE" 
+export const DEVELOPMENT = "DEVELOPMENT"
+export const DONE = "DONE"
+export const RED = "RED"
+export const YELLOW = "YELLOW"
+export const GREEN = "GREEN"

@@ -1,0 +1,78 @@
+@mixin inputs {
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: #f9fafb;
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+    0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  border: 1px solid #d0d5dd;
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  &:focus {
+    border: 1px solid #d6bbfb;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+    z-index: 1;
+    outline: none;
+  }
+}
+@mixin labels {
+  position: absolute;
+  font-size: 12px;
+  color: red;
+  top: -7px;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.titleContainer {
+    padding-top: 10px;
+  position: relative;
+  .titleLabel {
+    @include labels();
+    top: 1px
+  }
+  .title {
+    @include inputs();
+  }
+}
+.textContainer {
+
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  .textLabel {
+    @include labels();
+    top: 1px
+  }
+  .text {
+    width: 100%;
+    @include inputs();
+  }
+}
+.addButton{
+    align-self: center;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #b987ff;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+      0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    border: 1px solid #d0d5dd;
+    color: white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    &:hover {
+        border: 1px solid #d6bbfb;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f4ebff;
+        z-index: 1;
+        outline: none;
+      }
+      &:active{
+        background-color: #a96cff;
+      }
+}
